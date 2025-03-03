@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <RootNamespace>ExpenseManagement.TransactionEntities</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Amazon.Extensions.Configuration.SystemsManager" Version="6.2.2" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.13" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.13">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Core\Core.csproj" />
+      <ProjectReference Include="..\EntityProviders.Postgres\EntityProviders.Postgres.csproj" />
+      <ProjectReference Include="..\EventPublishers.Reports\EventPublishers.Reports.csproj" />
+      <ProjectReference Include="..\PrimaryPorts\PrimaryPorts.csproj" />
+    </ItemGroup>
+
+</Project>
